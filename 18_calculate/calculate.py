@@ -26,3 +26,30 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+    total = None
+
+    if operation == 'add':
+        total = a + b
+    elif operation == 'subtract':
+        total = a - b
+    elif operation == 'divide':
+        total = a / b
+    elif operation == 'multiply':
+        total = a * b
+    
+    print(total)
+    
+    if total is not None:
+        if make_int:
+            result = int(total)
+            return f"{message} {result}"
+    else:
+        return total
+
+
+
+color_pairs = [['red', 'green'], ['purple', 'orange']]
+
+pair1, pair2 = color_pairs     #pair1 = ['red', 'green'] and pair2 = ['purple', 'orange']
+
+
