@@ -18,3 +18,9 @@ def sum_up_diagonals(matrix):
         >>> sum_up_diagonals(m2)
         30
     """
+    
+    sum1 = sum2 = 0
+    for i, row in enumerate(matrix):
+        sum1 += row[i]
+        sum2 += row[-i-1]
+    return sum1 + sum2

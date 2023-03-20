@@ -21,3 +21,6 @@ def extract_full_names(people):
         names = first + ' ' + last
         list.append(names)
     print(list)
+
+
+    

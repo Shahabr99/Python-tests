@@ -13,6 +13,16 @@ def two_oldest_ages(ages):
         >>> two_oldest_ages([1, 5, 5, 2])
         (2, 5)
     """
+    def two_oldest_ages(ages):
+        oldest = float('-inf')
+        second_oldest = float('-inf')
+        for age in ages:
+            if age > oldest:
+                second_oldest = oldest
+                oldest = age
+            elif age > second_oldest and age != oldest:
+                second_oldest = age
+        return (second_oldest, oldest)
 
     # NOTE: don't worry about an optimized runtime here; it's fine if
     # you have a runtime worse than O(n)
@@ -21,3 +31,4 @@ def two_oldest_ages(ages):
     # you may find it helpful to research the `sorted(iter)` function, which
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
+

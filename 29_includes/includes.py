@@ -30,3 +30,9 @@ def includes(collection, sought, start=None):
         >>> includes({"apple": "red", "berry": "blue"}, "blue")
         True
     """
+    if start:
+        collection_piece = collection[start:]
+    if sought in collection_piece:
+        return True
+    else:
+        return False
